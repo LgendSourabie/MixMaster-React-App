@@ -1,6 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { About, HomeLayout, Newsletter, Landing, Cocktail, Error } from "./Pages";
-
+import { loader as landingloader } from "./Pages/Landing";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -9,6 +9,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        loader: landingloader,
         element: <Landing />,
       },
 
